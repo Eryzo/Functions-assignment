@@ -4,6 +4,10 @@ function stroke(style) {
     ctx.strokeStyle = style;
 }
 
+function lineWidth(width) {
+    ctx.lineWidth = width;
+}
+
 function fill(style) {
     ctx.fillStyle = style;
 }
@@ -39,8 +43,18 @@ function circle(x, y, r, mode) {
     }
 }
 
-function star(x, y, color) {
+function star(x, y, color,) {
     stroke(color);
-    line(x, y + 30, x + 20, y + 50);
+    lineWidth(3);
+    line(x, y + 10, x - 20, y + 40);
+    line(x, y + 10, x + 20, y + 40);
+    line(x + 20, y + 40, x + 50, y + 40);
+    line(x - 20, y + 40, x - 50, y + 40);
+    line(x + 50, y + 40, x + 30, y + 70);
+    line(x - 50, y + 40, x - 30, y + 70);
+    line(x + 30, y + 70, x + 40, y + 100);
+    line(x - 30, y + 70, x - 40, y + 100);
+    line(x, y + 80, x - 40, y + 100);
+    line(x, y + 80, x + 40, y + 100);
 }
 
